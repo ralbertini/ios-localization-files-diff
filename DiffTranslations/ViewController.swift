@@ -15,7 +15,6 @@ enum file {
 
 class ViewController: NSViewController {
 
-    
     @IBOutlet weak var txtLeft: NSTextField!
     @IBOutlet weak var txtRight: NSTextField!
     
@@ -24,6 +23,7 @@ class ViewController: NSViewController {
     
     var firstfileKeys: [String] = []
     var secondFileKeys: [String] = []
+    var missingLines: [String] = []
     
     var selectedFile:file = .first
     
@@ -42,9 +42,11 @@ class ViewController: NSViewController {
     @IBAction func browseFile(sender: NSButton) {
         
         if sender == self.btnLeft {
+            
             self.selectedFile = .first
             self.readFileTo()
         } else if sender == self.btnRight {
+            
             self.selectedFile = .second
             self.readFileTo()
         }
@@ -96,8 +98,7 @@ class ViewController: NSViewController {
         }
         
         for line in reader {
-            print(">" + line.trimmingCharacters(in: .whitespacesAndNewlines))
-            
+   
             let l:String = line.trimmingCharacters(in: .whitespacesAndNewlines)
             
             if l.contains("=") {
@@ -127,14 +128,34 @@ class ViewController: NSViewController {
     
     @IBAction func checkAction(sender: NSButton) {
         
-        self.check()
+        self.generateMissingLines()
     }
     
-    func check() {
+    
+    func generateMissingLines() {
         
-        var t =  firstfileKeys.filter { !secondFileKeys.contains($0) }
-        print(t)
+        let missingKeys =  firstfileKeys.filter { !secondFileKeys.contains($0) }
         
+        guard let reader = LineReader(path: self.txtLeft.stringValue) else {
+            return; // cannot open file
+        }
+        
+        for line in reader {
+            
+            let l:String = line.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            if l.contains("=") {
+                if let key:String = l.components(separatedBy: "=").first {
+                    
+                    if missingKeys.contains(key) {
+                        self.missingLines.append(l)
+                    }
+                }
+            }
+        }
+        for item in missingLines {
+            print(item)
+        }
     }
 }
 
