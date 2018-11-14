@@ -120,10 +120,11 @@ class ViewController: NSViewController {
         self.txtLeft.stringValue = self.txtRight.stringValue
         self.txtRight.stringValue = aux
         
+        self.missingLines.removeAll()
         self.selectedFile = .first
-        self.readFileTo()
+        self.read(path: self.txtLeft.stringValue)
         self.selectedFile = .second
-        self.readFileTo()
+        self.read(path: self.txtRight.stringValue)
     }
     
     @IBAction func checkAction(sender: NSButton) {
