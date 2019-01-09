@@ -711,7 +711,7 @@
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P4H-Nl-4wc">
                                 <rect key="frame" x="20" y="316" width="562" height="22"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" userInterfaceLayoutDirection="rightToLeft" alignment="right" placeholderString="Path for second file" drawsBackground="YES" id="4If-di-e4f">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" userInterfaceLayoutDirection="rightToLeft" alignment="right" title="/Users/techfor-albertinir/Code/Feingold/feingoldtech-ios-realgreen/Real Green/pt-BR.lproj/RealGreen.strings" placeholderString="Path for second file" drawsBackground="YES" id="4If-di-e4f">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -764,6 +764,17 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="toggleInputsWithSender:" target="XfG-lQ-9wD" id="Gi7-Do-Khz"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhq-p4-E0M">
+                                <rect key="frame" x="318" y="158" width="139" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Buscar Arquivos" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IUa-cR-vld">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="buscarActionWithSender:" target="XfG-lQ-9wD" id="Rmb-q0-7wq"/>
                                 </connections>
                             </button>
                         </subviews>
