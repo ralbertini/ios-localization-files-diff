@@ -19,7 +19,7 @@ class StringManipulation: NSObject {
     
     private func getAllStringFiles() {
         
-        let folder:Folder = Folder.home
+        let folder:Folder = Folder.current
         
         folder.makeFileSequence(recursive: true, includeHidden: false).forEach { file in
             if let ext = file.extension, ext == "strings" {

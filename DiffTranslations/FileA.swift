@@ -14,8 +14,6 @@ public class FileA {
     
     public let path: String
     
-    
-    
     fileprivate let file: UnsafeMutablePointer<FILE>!
     
     init?(path: String) {
