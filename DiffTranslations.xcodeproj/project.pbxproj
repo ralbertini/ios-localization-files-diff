@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F81AF1B421E51FE00071BE63 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81AF1B321E51FE00071BE63 /* Files.framework */; };
 		F81AF1B621E6717E0071BE63 /* StringManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81AF1B521E6717E0071BE63 /* StringManipulation.swift */; };
 		F837FB7321E3E412003BF578 /* FileA.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837FB7221E3E412003BF578 /* FileA.swift */; };
+		F886EB2F22036F1E00CF50AC /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = F886EB2E22036F1E00CF50AC /* Files.swift */; };
 		F8F32B0721820BAE00EE8CB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F32B0621820BAE00EE8CB9 /* AppDelegate.swift */; };
 		F8F32B0921820BAE00EE8CB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F32B0821820BAE00EE8CB9 /* ViewController.swift */; };
 		F8F32B0B21820BAE00EE8CB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F32B0A21820BAE00EE8CB9 /* Assets.xcassets */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F81AF1B321E51FE00071BE63 /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Files.framework; path = Carthage/Build/Mac/Files.framework; sourceTree = SOURCE_ROOT; };
 		F81AF1B521E6717E0071BE63 /* StringManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringManipulation.swift; sourceTree = "<group>"; };
 		F837FB7221E3E412003BF578 /* FileA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileA.swift; sourceTree = "<group>"; };
+		F886EB2E22036F1E00CF50AC /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		F8F32B0321820BAE00EE8CB9 /* DiffTranslations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiffTranslations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F32B0621820BAE00EE8CB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F32B0821820BAE00EE8CB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,7 +34,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F81AF1B421E51FE00071BE63 /* Files.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +66,8 @@
 				F8F32B0F21820BAE00EE8CB9 /* Info.plist */,
 				F8F32B1021820BAE00EE8CB9 /* DiffTranslations.entitlements */,
 				F837FB7221E3E412003BF578 /* FileA.swift */,
-				F81AF1B321E51FE00071BE63 /* Files.framework */,
 				F81AF1B521E6717E0071BE63 /* StringManipulation.swift */,
+				F886EB2E22036F1E00CF50AC /* Files.swift */,
 			);
 			path = DiffTranslations;
 			sourceTree = "<group>";
@@ -83,7 +82,6 @@
 				F8F32AFF21820BAE00EE8CB9 /* Sources */,
 				F8F32B0021820BAE00EE8CB9 /* Frameworks */,
 				F8F32B0121820BAE00EE8CB9 /* Resources */,
-				F81AF1B221E517900071BE63 /* Carthage Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,25 +138,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		F81AF1B221E517900071BE63 /* Carthage Copy Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Files.framework",
-			);
-			name = "Carthage Copy Frameworks";
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Files.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		F8F32AFF21820BAE00EE8CB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -166,6 +145,7 @@
 			files = (
 				F8F32B0921820BAE00EE8CB9 /* ViewController.swift in Sources */,
 				F8F32B0721820BAE00EE8CB9 /* AppDelegate.swift in Sources */,
+				F886EB2F22036F1E00CF50AC /* Files.swift in Sources */,
 				F837FB7321E3E412003BF578 /* FileA.swift in Sources */,
 				F81AF1B621E6717E0071BE63 /* StringManipulation.swift in Sources */,
 			);

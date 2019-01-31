@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import Files
 
 class StringManipulation: NSObject {
 
