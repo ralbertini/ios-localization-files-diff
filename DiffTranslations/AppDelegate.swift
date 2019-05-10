@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+ //  AppDelegate.swift
 //  DiffTranslations
 //
 //  Created by Ronaldo Albertini on 25/10/18.
